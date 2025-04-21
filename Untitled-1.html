@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atharva's Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      color: #333;
+    }
+
+    header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #fff0e1;
+    }
+
+    nav button {
+      background-color: #ff9671;
+      border: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #ff6f61;
+    }
+
+    .experiment {
+      display: none;
+      padding: 2rem;
+      background-color: white;
+      margin: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>WD Project</header>
+
+  <nav>
+    <button onclick="showExperiment(1)">Experiment 1</button>
+    <button onclick="showExperiment(2)">Experiment 2</button>
+    <button onclick="showExperiment(3)">Experiment 3</button>
+    <button onclick="showExperiment(4)">Experiment 4</button>
+    <button onclick="showExperiment(5)">Experiment 5</button>
+    <button onclick="showExperiment(6)">Experiment 6</button>
+    <button onclick="showExperiment(7)">Experiment 7</button>
+    <button onclick="showExperiment(8)">Experiment 8</button>
+    <button onclick="showExperiment(9)">Experiment 9</button>
+  </nav>
+
+  <div id="experiment1" class="experiment">
+    <h2>Experiment 1: Create a simple webpage</h2>
+    <p>Hello! My name is Atharva Aurangabadkar. Welcome to my first HTML webpage!</p>
+  </div>
+
+  <div id="experiment2" class="experiment">
+    <h2>Experiment 2: Create a webpage with tables</h2>
+    <table border="1" cellpadding="10">
+      <tr><th>Name</th><th>Age</th><th>City</th></tr>
+      <tr><td>Atharva</td><td>21</td><td>Solapur</td></tr>
+      <tr><td>Bhushan</td><td>22</td><td>Kokan</td></tr>
+    </table>
+  </div>
+
+  <div id="experiment3" class="experiment">
+    <h2>Experiment 3: Create a form</h2>
+    <form>
+      Name: <input type="text" name="name"><br><br>
+      Email: <input type="email" name="email"><br><br>
+      Message: <textarea name="message"></textarea><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="experiment4" class="experiment">
+    <h2>Experiment 4: Text animation using CSS</h2>
+    <p style="font-size: 24px; animation: slide 3s infinite alternate; color: #ff6f61;">
+      Welcome to the animated world!
+    </p>
+    <style>
+      @keyframes slide {
+        from { transform: translateX(0); }
+        to { transform: translateX(100px); }
+      }
+    </style>
+  </div>
+
+  <div id="experiment5" class="experiment">
+    <h2>Experiment 5: Using frames (iframe)</h2>
+    <iframe src="https://example.com" width="100%" height="300"></iframe>
+  </div>
+
+  <div id="experiment6" class="experiment">
+    <h2>Experiment 6: Adding audio and video</h2>
+    <p>Audio Sample:</p>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p>Video Sample:</p>
+    <video width="320" height="240" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div id="experiment7" class="experiment">
+    <h2>Experiment 7: HTML with CSS</h2>
+    <div style="background-color: #d4f1f4; padding: 10px; border-radius: 10px;">
+      <h3 style="color: #0077b6;">This is styled using CSS!</h3>
+      <p>This is Atharva's styled HTML element using inline CSS.</p>
+    </div>
+  </div>
+
+  <div id="experiment8" class="experiment">
+    <h2>Experiment 8: Internal and External CSS</h2>
+    <style>
+      .internalStyle {
+        color: #f76c6c;
+        font-weight: bold;
+      }
+    </style>
+    <p class="internalStyle">This paragraph is styled using internal CSS.</p>
+  </div>
+
+  <div id="experiment9" class="experiment">
+    <h2>Experiment 9: Resume using HTML</h2>
+    <h3>Atharva Aurangabadkar</h3>
+    <p>Email: atharva@example.com</p>
+    <p>Skills: HTML, CSS, JavaScript</p>
+    <p>Education: B.Sc. Computer Science</p>
+  </div>
+
+  <script>
+    function showExperiment(num) {
+      const experiments = document.querySelectorAll('.experiment');
+      experiments.forEach(exp => exp.style.display = 'none');
+      document.getElementById('experiment' + num).style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>
